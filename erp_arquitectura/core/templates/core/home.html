@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Refugio Nómada</title>
+
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<h1 class="logo">Refugio Nómada</h1>
+
+<ul class="menu">
+
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#servicios">Servicios</a></li>
+<li><a href="#educacion">Material</a></li>
+<li><a href="#contacto">Contacto</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<section id="inicio" class="hero">
+
+<div class="hero-content">
+<img src="{% static 'img/melipilla.jpg' %}" alt="Melipilla" class="hero-image">
+
+<h2>Arquitectura con enfoque territorial</h2>
+
+<p>
+Diseño, regularización y asesoría para proyectos rurales y urbanos.
+</p>
+
+<button>Explorar servicios</button>
+
+</div>
+
+</section>
+
+
+<section id="servicios" class="servicios">
+
+<h2>Servicios</h2>
+
+<div class="grid-servicios">
+
+<div class="card">
+<h3>Regularizaciones</h3>
+<p>Tramitación y gestión para regularizar viviendas.</p>
+</div>
+
+<div class="card">
+<h3>Obras Nuevas</h3>
+<p>Diseño arquitectónico y planificación de proyectos.</p>
+</div>
+
+<div class="card">
+<h3>Subdivisiones</h3>
+<p>Gestión territorial y división predial.</p>
+</div>
+
+<div class="card">
+<h3>Modelado 3D</h3>
+<p>Visualización y planimetría de proyectos.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="educacion" class="educacion">
+
+<h2>Material Educativo</h2>
+
+<p>
+Guías y recursos para estudiantes de arquitectura y autoconstrucción.
+</p>
+
+<button>Descargar guía</button>
+
+</section>
+
+
+<section id="contacto" class="contacto">
+
+<h2>Contacto</h2>
+
+<form>
+
+<input type="text" placeholder="Nombre">
+
+<input type="email" placeholder="Email">
+
+<textarea placeholder="Mensaje"></textarea>
+
+<button>Enviar consulta</button>
+
+</form>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Refugio Nómada</p>
+
+</footer>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+</html>
