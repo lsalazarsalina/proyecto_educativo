@@ -1,5 +1,5 @@
 {% load static %}
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 
@@ -58,9 +58,13 @@ Diseño, regularización y asesoría para proyectos rurales y urbanos.
 <div class="grid-servicios">
 
 <div class="card">
-<h3>Regularizaciones</h3>
-<p>Tramitación y gestión para regularizar viviendas.</p>
+    <h3>Automatización Formularios MINVU</h3>
+    <p>Generación automática de formularios oficiales (ej. 12.4) a partir de datos de clientes y proyectos.</p>
+    <a href="{% url 'formulario_124' %}">
+        <button>Generar Formulario</button>
+    </a>
 </div>
+
 
 <div class="card">
 <h3>Obras Nuevas</h3>

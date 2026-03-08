@@ -1,14 +1,14 @@
 from __future__ import annotations
 from pathlib import Path
 from django.shortcuts import render
+from frontend.services.excel_reader import ExcelReader124
 
 def home_erp(request):
     return render(request, "core/.html")
 
 from django.http import FileResponse
 from django.conf import settings
-from .services.excel_reader import ExcelReader124
-from .services.minvu_pdf_filler import rellenar_pdf_124
+from frontend.services.minvu_pdf_filler import rellenar_pdf_124
 
 PDF_ORIGINAL  = Path(settings.BASE_DIR) / "core/static/formularios/formulario_12_4.pdf"
 PDF_OUTPUT_DIR = Path(settings.BASE_DIR) / "core/static/formularios/generados"
