@@ -1,96 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenid@s</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
-    <style>
-        /* Fuerza el centrado de todo el cuerpo */
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Centra todo el contenido de la página */
-            text-align: center;  /* Centra todos los textos */
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* Navbar y Header */
-        header, .navbar {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+<title>Bienvenid@s</title>
 
-        .logo-img {
-            width: 250px; /* Tu tamaño deseado */
-            height: auto;
-            margin-top: 20px;
-        }
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
-        .logo {
-            width: 100%;
-            text-align: center;
-            margin: 20px 0;
-        }
+</head>
 
-        .menu {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-            gap: 20px;
-        }
+<body>
 
-        /* Sección Hero (Imagen de Melipilla y textos) */
-        .hero {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
+<header>
+    <nav class="navbar">
+        <img src="{% static 'images/logo.jpg' %}" alt="Logo" class="logo-img">
+        
+        <h1 class="logo">Bienvenid@s</h1>
 
-        .hero-content {
-            max-width: 800px;
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* ESTO centra la imagen, el h2 y el p */
-            margin: 0 auto;
-        }
+        <ul class="menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#educacion">Material</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
 
-        /* Ajuste para que los párrafos no se vean tan anchos */
-        p {
-            max-width: 600px;
-            margin: 10px auto;
-        }
 
-        /* Grid de servicios centrada */
-        .grid-servicios {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+<section id="inicio" class="hero">
 
-        .card {
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 8px;
-        }
+<div class="hero-content">
+<img src="{% static 'images/melipilla.jpg' %}" alt="Melipilla" class="images-melipilla" style="max-width: 500px; width: 100%; height: auto; display: block; margin: 20px auto;">
 
-        /* Botón verde */
-        .btn-verde {
-            background-color: #2d5a27;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
-    </style>
-    
+        
+        <h2>Arquitectura con enfoque territorial</h2>
+        <p>Diseño, regularización y asesoría para proyectos rurales y urbanos.</p>
+        
+        <button class="btn-verde">Explorar servicios</button>
+    </div>
+</section>
+<section id="erp" class="servicios" style="background-color: #f0f7f0; padding: 60px 20px; text-align: center;">
+<div class="card">
+    <h3>Automatización Formularios MINVU</h3>
+    <p>Utiliza nuestra herramienta para automatizar tus formularios a partir de datos Excel. </p>
+    <a href="{% url 'generar_124' %}" class="btn-verde">Acceder al Formulario</a>
+</div>
+</section>
+
+<section id="servicios" class="servicios">
+
+<h2>Servicios</h2>
+
+<div class="grid-servicios">
+
+<div class="card">
+<h3>Regularizaciones</h3>
+<p>Tramitación y gestión para regularizar viviendas.</p>
+</div>
+
+<div class="card">
+<h3>Obras Nuevas</h3>
+<p>Diseño arquitectónico y planificación de proyectos.</p>
+</div>
+
+<div class="card">
+<h3>Subdivisiones</h3>
+<p>Gestión territorial y división predial.</p>
+</div>
+
+<div class="card">
+<h3>Modelado 3D</h3>
+<p>Visualización y planimetría de proyectos.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="educacion" class="educacion">
+
+<h2>Material Educativo</h2>
+
+<p>
+Guías y recursos para estudiantes de arquitectura y autoconstrucción.
+</p>
+
+<button>Descargar guía</button>
+
+</section>
+
+
+<section id="contacto" class="contacto">
+
+<h2>Contacto</h2>
+
+<form>
+
+<input type="text" placeholder="Nombre">
+
+<input type="email" placeholder="Email">
+
+<textarea placeholder="Mensaje"></textarea>
+
+<button>Enviar consulta</button>
+
+</form>
+
+<footer>
+
+<p>© 2026 Refugio Nómada</p>
+
+</footer>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+<div class="hero-content">
+<img src="{% static 'images/munco.jpg' %}" alt="Mundo" class="images-munco" style="max-width: 500px; width: 100%; height: auto; display: block; margin: 20px auto;">
+
+        
+</html>

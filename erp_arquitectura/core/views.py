@@ -2,9 +2,8 @@ from __future__ import annotations
 from pathlib import Path
 from django.shortcuts import render
 
-def home_erp(request):
-    # Asegúrate de que el archivo index_erp.html exista en core/templates/core/
-    return render(request, "core/formulario_124.html")
+def index(request):
+    return render(request, 'index.html') # Sin 'templates/', solo el nombre
 
 from django.http import FileResponse
 from django.conf import settings
