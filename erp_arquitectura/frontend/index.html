@@ -1,131 +1,96 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenid@s</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Fuerza el centrado de todo el cuerpo */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra todo el contenido de la página */
+            text-align: center;  /* Centra todos los textos */
+        }
 
-<title>Refugio Nómada</title>
+        /* Navbar y Header */
+        header, .navbar {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
 
-<link rel="stylesheet" href="css/styles.css">
+        .logo-img {
+            width: 250px; /* Tu tamaño deseado */
+            height: auto;
+            margin-top: 20px;
+        }
 
-</head>
+        .logo {
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+        }
 
-<body>
+        .menu {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            gap: 20px;
+        }
 
-<header>
+        /* Sección Hero (Imagen de Melipilla y textos) */
+        .hero {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
 
-<nav class="navbar">
+        .hero-content {
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* ESTO centra la imagen, el h2 y el p */
+            margin: 0 auto;
+        }
 
-<h1 class="logo">Refugio Nómada</h1>
+        /* Ajuste para que los párrafos no se vean tan anchos */
+        p {
+            max-width: 600px;
+            margin: 10px auto;
+        }
 
-<ul class="menu">
+        /* Grid de servicios centrada */
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
 
-<li><a href="#inicio">Inicio</a></li>
-<li><a href="#servicios">Servicios</a></li>
-<li><a href="#educacion">Material</a></li>
-<li><a href="#contacto">Contacto</a></li>
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+        }
 
-</ul>
-
-</nav>
-
-</header>
-
-
-<section id="inicio" class="hero">
-
-<div class="hero-content">
-img/melipilla.webp
-<h2>Arquitectura con enfoque territorial</h2>
-
-<p>
-Diseño, regularización y asesoría para proyectos rurales y urbanos.
-</p>
-
-<button>Explorar servicios</button>
-
-</div>
-
-</section>
-
-
-<section id="servicios" class="servicios">
-
-<h2>Servicios</h2>
-
-<div class="grid-servicios">
-
-<div class="card">
-    <h3>Automatización Formularios MINVU</h3>
-    <p>Generación automática de formularios oficiales (ej. 12.4) a partir de datos de clientes y proyectos.</p>
-    <a href="{% url 'formulario_124' %}">
-        <button>Generar Formulario</button>
-    </a>
-</div>
-
-
-<div class="card">
-<h3>Obras Nuevas</h3>
-<p>Diseño arquitectónico y planificación de proyectos.</p>
-</div>
-
-<div class="card">
-<h3>Subdivisiones</h3>
-<p>Gestión territorial y división predial.</p>
-</div>
-
-<div class="card">
-<h3>Modelado 3D</h3>
-<p>Visualización y planimetría de proyectos.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section id="educacion" class="educacion">
-
-<h2>Material Educativo</h2>
-
-<p>
-Guías y recursos para estudiantes de arquitectura y autoconstrucción.
-</p>
-
-<button>Descargar guía</button>
-
-</section>
-
-
-<section id="contacto" class="contacto">
-
-<h2>Contacto</h2>
-
-<form>
-
-<input type="text" placeholder="Nombre">
-
-<input type="email" placeholder="Email">
-
-<textarea placeholder="Mensaje"></textarea>
-
-<button>Enviar consulta</button>
-
-</form>
-
-</section>
-
-
-<footer>
-
-<p>© 2026 Refugio Nómada</p>
-
-</footer>
-
-<script src="js/script.js"></script>
-
-</body>
-
-</html>
+        /* Botón verde */
+        .btn-verde {
+            background-color: #2d5a27;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+    

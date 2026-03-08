@@ -3,10 +3,12 @@ from pathlib import Path
 from django.shortcuts import render
 
 def home_erp(request):
-    return render(request, "core/.html")
+    # Asegúrate de que el archivo index_erp.html exista en core/templates/core/
+    return render(request, "core/formulario_124.html")
 
 from django.http import FileResponse
 from django.conf import settings
+# En core/views.py
 from .services.excel_reader import ExcelReader124
 from .services.minvu_pdf_filler import rellenar_pdf_124
 
